@@ -1,0 +1,144 @@
+.figma-detail-container {
+  min-height: 100vh;
+  background: #0a0a0a;
+  color: #f4f4f4;
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.figma-header {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.back-button {
+  background: transparent;
+  border: 1px solid #333;
+  color: #f4f4f4;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.back-button:hover {
+  border-color: #4f46e5;
+  background: #4f46e5;
+  transform: translateX(-4px);
+}
+
+.project-info h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  background: linear-gradient(135deg, #f4f4f4 0%, #aaa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.project-info p {
+  font-size: 1.1rem;
+  color: #aaa;
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+  max-width: 800px;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.tech-tag {
+  background: #333;
+  color: #f4f4f4;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid #444;
+}
+
+.figma-embed-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+
+.figma-embed-container iframe {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.project-actions {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+  text-align: center;
+}
+
+.figma-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #4f46e5;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.figma-link:hover {
+  background: #3730a3;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.3);
+}
+
+.error-message {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.error-message h2 {
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .figma-header {
+    padding: 30px 20px;
+  }
+  
+  .project-info h1 {
+    font-size: 2rem;
+  }
+  
+  .project-info p {
+    font-size: 1rem;
+  }
+  
+  .figma-embed-container iframe {
+    height: 400px;
+  }
+  
+  .project-tech {
+    gap: 6px;
+  }
+  
+  .tech-tag {
+    padding: 4px 12px;
+    font-size: 0.75rem;
+  }
+}
