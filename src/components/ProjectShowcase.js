@@ -14,7 +14,7 @@ const ProjectShowcase = () => {
       id: 1,
       title: "Sajha Yatayat Tracker",
       description: "Web app to track Sajha buses in real-time using open map APIs. Features live location tracking and route optimization.",
-      image: "/images/projects/sajha-tracker.png",
+      image: "/images/projects/sajha-tracker-app.png",
       technologies: ["JavaScript", "OpenMap API", "HTML", "CSS"],
       liveUrl: "https://gaurav0xa1.github.io/sajha-concept/",
       githubUrl: "https://github.com/gaurav0xa1/sajha-concept",
