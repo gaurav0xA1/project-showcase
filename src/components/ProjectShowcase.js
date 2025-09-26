@@ -35,7 +35,7 @@ const ProjectShowcase = () => {
       id: 3,
       title: "To Do List",
       description: "A minimalist to-do list with intuitive task management and local storage persistence.",
-      image: "/images/projects/todo-app.svg",
+      image: "/images/projects/todo-app.png",
       technologies: ["JavaScript", "LocalStorage", "CSS3"],
       liveUrl: "https://gaurav0xa1.github.io/todoapp/",
       githubUrl: "https://github.com/gaurav0xa1/todoapp",
@@ -45,11 +45,11 @@ const ProjectShowcase = () => {
       id: 4,
       title: "Glassmorphic Calculator",
       description: "A sleek, modern calculator with Apple-inspired frosted glass UI effects.",
-      image: "/images/projects/calculator.svg",
+      image: "/images/projects/calculator.png",
       technologies: ["HTML", "CSS3", "JavaScript", "Glassmorphism"],
       liveUrl: "https://gaurav0xa1.github.io/glassmorphic-calculator/",
       githubUrl: "https://github.com/gaurav0xa1/glassmorphic-calculator",
-      category: "design"
+      category: "web"
     },
     {
       id: 5,
@@ -62,46 +62,48 @@ const ProjectShowcase = () => {
       category: "web"
     },
     // UI/UX Design Projects
-    {
-      id: 6,
-      title: "Portfolio Design System",
-      description: "Complete design system for personal portfolio with modern UI components, color schemes, and typography guidelines.",
-      image: "/images/projects/portfolio-design.png",
-      technologies: ["Figma", "Design Systems", "UI/UX", "Typography"],
-      projectType: "figma",
-      figmaId: "portfolio-design",
-      category: "design"
-    },
-    {
-      id: 7,
-      title: "Mobile App UI Kit",
-      description: "Comprehensive mobile application interface design with screens for onboarding, dashboard, and user profiles.",
-      image: "/images/projects/mobile-app-ui.png",
-      technologies: ["Figma", "Mobile Design", "Prototyping", "User Flow"],
-      projectType: "figma",
-      figmaId: "mobile-app-ui",
-      category: "design"
-    },
-    {
-      id: 8,
-      title: "Analytics Dashboard",
-      description: "Modern dashboard design for data visualization with charts, metrics, and responsive layouts.",
-      image: "/images/projects/web-dashboard.png",
-      technologies: ["Figma", "Dashboard Design", "Data Visualization", "Responsive"],
-      projectType: "figma",
-      figmaId: "web-dashboard",
-      category: "design"
-    },
+
+    
     {
       id: 9,
       title: "E-commerce Platform",
       description: "Complete e-commerce website design with product pages, checkout flow, and user account management.",
       image: "/images/projects/e-commerce-ui.png",
-      technologies: ["Figma", "E-commerce", "User Experience", "Conversion"],
+      technologies: ["Figma", "E-commerce", "Prototyping", "Conversion","Responsive"],
       projectType: "figma",
       figmaId: "e-commerce-ui",
       category: "design",
       featured: true
+    },
+    {
+      id: 6,
+      title: "Modern Todo App",
+      description: "Complete design system for personal portfolio with modern UI components, color schemes, and typography guidelines.",
+      image: "/images/projects/modern-todo.png",
+      technologies: ["Figma", "Dark Theme", "UI/UX"],
+      projectType: "figma",
+      figmaId: "modern-todo-app",
+      category: "design"
+    },
+    {
+      id: 7,
+      title: "Futsal App Concept",
+      description: "Comprehensive mobile application interface design with screens for onboarding, dashboard, and user profiles.",
+      image: "/images/projects/mobile-futsal-app-ui.png",
+      technologies: ["Figma", "Mobile Design", "User Flow"],
+      projectType: "figma",
+      figmaId: "futsal-app-concept",
+      category: "design"
+    },
+    {
+      id: 8,
+      title: "Spotify Clone",
+      description: "Modern dashboard design for data visualization with charts, metrics, and responsive layouts.",
+      image: "/images/projects/spotify-clone.png",
+      technologies: ["Figma", "Dashboard Design", "Prototyping", "Responsive"],
+      projectType: "figma",
+      figmaId: "spotify-clone",
+      category: "design"
     }
   ];
 

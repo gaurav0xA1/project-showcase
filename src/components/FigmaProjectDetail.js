@@ -8,31 +8,31 @@ const FigmaProjectDetail = () => {
 
   // Sample Figma projects data
   const figmaProjects = {
-    'portfolio-design': {
-      title: "Portfolio Design System",
+    'modern-todo-app': {
+      title: "Modern Todo App",
       description: "Complete design system for personal portfolio with modern UI components, color schemes, and typography guidelines.",
       figmaUrl: "https://embed.figma.com/design/RwcSpDIk9blkHvAwOT6j2u/Untitled?node-id=0-1&embed-host=share",
       technologies: ["Figma", "Design Systems", "UI/UX", "Typography"],
       category: "design"
     },
-    'mobile-app-ui': {
-      title: "Mobile App UI Kit",
+    'futsal-app-concept': {
+      title: "Futsal App Concept",
       description: "Comprehensive mobile application interface design with screens for onboarding, dashboard, and user profiles.",
-      figmaUrl: "https://embed.figma.com/design/RwcSpDIk9blkHvAwOT6j2u/Untitled?node-id=0-1&embed-host=share",
+      figmaUrl: "https://embed.figma.com/design/hOXxSBRK7MIItBNwlDaufY/Untitled?embed-host=share" ,
       technologies: ["Figma", "Mobile Design", "Prototyping", "User Flow"],
       category: "design"
     },
-    'web-dashboard': {
-      title: "Analytics Dashboard",
+    'spotify-clone': {
+      title: "Spotify Clone",
       description: "Modern dashboard design for data visualization with charts, metrics, and responsive layouts.",
-      figmaUrl: "https://embed.figma.com/design/RwcSpDIk9blkHvAwOT6j2u/Untitled?node-id=0-1&embed-host=share",
+      figmaUrl: "https://embed.figma.com/design/WimN2RTBdQZWeLc1RCUsN0/Untitled?embed-host=share",
       technologies: ["Figma", "Dashboard Design", "Data Visualization", "Responsive"],
       category: "design"
     },
     'e-commerce-ui': {
       title: "E-commerce Platform",
       description: "Complete e-commerce website design with product pages, checkout flow, and user account management.",
-      figmaUrl: "https://embed.figma.com/design/RwcSpDIk9blkHvAwOT6j2u/Untitled?node-id=0-1&embed-host=share",
+      figmaUrl: "https://embed.figma.com/design/Epyh9MhvMjzlEqYzUaTZqj/Untitled?embed-host=share",
       technologies: ["Figma", "E-commerce", "User Experience", "Conversion"],
       category: "design"
     }

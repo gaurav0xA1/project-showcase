@@ -27,8 +27,8 @@
 }
 
 .back-button:hover {
-  border-color: #4f46e5;
-  background: #4f46e5;
+  border-color: #666;
+  background: #666;
   transform: translateX(-4px);
 }
 
@@ -90,7 +90,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #4f46e5;
+  background: #666;
   color: white;
   padding: 12px 24px;
   border-radius: 8px;
@@ -101,9 +101,9 @@
 }
 
 .figma-link:hover {
-  background: #3730a3;
+  background: #888;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .error-message {
