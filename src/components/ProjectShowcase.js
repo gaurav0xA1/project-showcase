@@ -96,6 +96,17 @@ const ProjectShowcase = () => {
       category: "design"
     },
     {
+      id: 10,
+      title: "Sajha UI",
+      description: "Modern UI design system for Sajha application with comprehensive component library and design patterns.",
+      image: "/images/projects/sajha-ui.png",
+      technologies: ["Figma", "UI Design", "Design System", "Components"],
+      projectType: "figma",
+      figmaId: "sajha-ui",
+      category: "design",
+      featured: true
+    },
+    {
       id: 8,
       title: "Spotify Clone",
       description: "Modern dashboard design for data visualization with charts, metrics, and responsive layouts.",

@@ -35,6 +35,13 @@ const FigmaProjectDetail = () => {
       figmaUrl: "https://embed.figma.com/design/Epyh9MhvMjzlEqYzUaTZqj/Untitled?embed-host=share",
       technologies: ["Figma", "E-commerce", "User Experience", "Conversion"],
       category: "design"
+    },
+    'sajha-ui': {
+      title: "Sajha UI",
+      description: "Modern UI design system for Sajha application with comprehensive component library and design patterns.",
+      figmaUrl: "https://embed.figma.com/design/SBuCvq5MLPp5J7ORmepGkT/Untitled?node-id=0-1&embed-host=share",
+      technologies: ["Figma", "UI Design", "Design System", "Components"],
+      category: "design"
     }
   };
 
