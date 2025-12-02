@@ -131,15 +131,15 @@
   
   .project-image {
     height: 180px;
+    cursor: pointer;
+  }
+  
+  .project-overlay.show-overlay {
+    opacity: 1;
   }
   
   .project-content {
     padding: 16px;
-  }
-  
-  .project-overlay {
-    opacity: 1;
-    background: rgba(0, 0, 0, 0.6);
   }
   
   .project-title {

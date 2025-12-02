@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ProjectCard.css';
 
 const ProjectCard = ({ 
@@ -13,6 +13,7 @@ const ProjectCard = ({
   featured = false,
   navigate
 }) => {
+  const [showOverlay, setShowOverlay] = useState(false);
   
   const handleDemoClick = () => {
     if (projectType === 'figma' && figmaId) {
@@ -22,14 +23,35 @@ const ProjectCard = ({
     }
   };
 
-  const handleGithubClick = () => {
+  const handleGithubClick = (e) => {
+    e.stopPropagation();
+    if (window.innerWidth <= 768 && !showOverlay) {
+      setShowOverlay(true);
+      return;
+    }
     if (githubUrl && githubUrl !== '#') {
       window.open(githubUrl, '_blank');
     }
   };
+  
+  const handleDemoClickWrapper = (e) => {
+    e.stopPropagation();
+    if (window.innerWidth <= 768 && !showOverlay) {
+      setShowOverlay(true);
+      return;
+    }
+    handleDemoClick();
+  };
+  
+  const handleCardClick = () => {
+    if (window.innerWidth <= 768) {
+      setShowOverlay(!showOverlay);
+    }
+  };
+  
   return (
     <div className={`project-card ${featured ? 'featured' : ''}`}>
-      <div className="project-image">
+      <div className="project-image" onClick={handleCardClick}>
         <img 
           src={image} 
           alt={title}
@@ -37,10 +59,10 @@ const ProjectCard = ({
             e.target.src = "https://via.placeholder.com/400x200?text=" + encodeURIComponent(title);
           }}
         />
-        <div className="project-overlay">
+        <div className={`project-overlay ${showOverlay ? 'show-overlay' : ''}`}>
           <div className="project-links">
             {(liveUrl || (projectType === 'figma' && figmaId)) && (
-              <button onClick={handleDemoClick} className="btn-primary">
+              <button onClick={handleDemoClickWrapper} className="btn-primary">
                 {projectType === 'figma' ? 'View Design' : 'Live Demo'}
               </button>
             )}
