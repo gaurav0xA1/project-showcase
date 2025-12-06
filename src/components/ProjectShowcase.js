@@ -16,7 +16,7 @@ const ProjectShowcase = () => {
       description: "Web app to track Sajha buses in real-time using open map APIs. Features live location tracking and route optimization.",
       image: "/images/projects/sajha-tracker.png",
       technologies: ["JavaScript", "OpenMap API", "HTML", "CSS"],
-      liveUrl: "https://gaurav0xa1.github.io/sajha-concept/",
+      liveUrl: "https://sajha-app-concept.netlify.app/",
       githubUrl: "https://github.com/gaurav0xa1/sajha-concept",
       category: "web",
       featured: true
