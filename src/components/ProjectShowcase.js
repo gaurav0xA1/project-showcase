@@ -23,12 +23,12 @@ const ProjectShowcase = () => {
     },
     {
       id: 2,
-      title: "Election Portal",
-      description: "Mock digital election system with voter authentication and result visualization.",
-      image: "/images/projects/election-portal.svg",
-      technologies: ["React", "Node.js", "MongoDB", "JWT"],
-      liveUrl: "https://anupbhattarai2.com.np/projects/project2.html",
-      githubUrl: "#",
+      title: "DAG Builder",
+      description: "Visual pipeline builder for real-time DAG management.",
+      image: "/images/projects/dag-builder.png",
+      technologies: ["React", "Node.js", "React Flow"],
+      liveUrl: "https://pipeline-dagbuilder.vercel.app/",
+      githubUrl: "https://github.com/gaurav0xA1/pipeline-dagbuilder?tab=readme-ov-file",
       category: "web"
     },
     {
@@ -37,9 +37,20 @@ const ProjectShowcase = () => {
       description: "A minimalist to-do list with intuitive task management and local storage persistence.",
       image: "/images/projects/todo-app.png",
       technologies: ["JavaScript", "LocalStorage", "CSS3"],
-      liveUrl: "https://gaurav0xa1.github.io/todoapp/",
-      githubUrl: "https://github.com/gaurav0xa1/todoapp",
+      liveUrl: "https://fullstack-todo-kl83.vercel.app/",
+      githubUrl: "https://github.com/gaurav0xA1/fullstack-todo",
       category: "web"
+    },
+    {
+      id: 11,
+      title: "Ruju Website",
+      description: "Nepal’s premier AI-powered fact-checking platform using real-time data verification.",
+      image: "/images/projects/ruju-fact.png",
+      technologies: ["HTML", "CSS3", "JavaScript", "Glassmorphism"],
+      liveUrl: "https://ruju-test.vercel.app/",
+      githubUrl: "https://github.com/gaurav0xa1/glassmorphic-calculator",
+      category: "web",
+      featured: true
     },
     {
       id: 4,
@@ -53,17 +64,26 @@ const ProjectShowcase = () => {
     },
     {
       id: 5,
-      title: "Weather Dashboard",
-      description: "Web app to check real-time weather, temperature, humidity, and conditions by city using OpenWeatherMap API.",
-      image: "/images/projects/weather-app.svg",
-      technologies: ["React", "API Integration", "CSS3"],
-      liveUrl: "https://anupbhattarai2.com.np/projects/project2.html",
+      title: "Cafe Website",
+      description: "WModern website for Chiya Sangam Cafe featuring menu, gallery, contact info, and an online reservation feature. Built for a seamless user experience and easy updates.",
+      image: "/images/projects/chiya-sangam.png",
+      technologies: ["React", "Reservation System", "CSS3"],
+      liveUrl: "https://gaurav0xa1.github.io/chiya-sangam/",
       githubUrl: "#",
       category: "web"
     },
     // UI/UX Design Projects
-
     
+    {
+      id: 8,
+      title: "Spotify Clone",
+      description: "Modern dashboard design for data visualization with charts, metrics, and responsive layouts.",
+      image: "/images/projects/spotify-clone.png",
+      technologies: ["Figma", "Dashboard Design", "Prototyping", "Responsive"],
+      projectType: "figma",
+      figmaId: "spotify-clone",
+      category: "design"
+    },
     {
       id: 9,
       title: "E-commerce Platform",
@@ -105,16 +125,6 @@ const ProjectShowcase = () => {
       figmaId: "sajha-ui",
       category: "design",
       featured: true
-    },
-    {
-      id: 8,
-      title: "Spotify Clone",
-      description: "Modern dashboard design for data visualization with charts, metrics, and responsive layouts.",
-      image: "/images/projects/spotify-clone.png",
-      technologies: ["Figma", "Dashboard Design", "Prototyping", "Responsive"],
-      projectType: "figma",
-      figmaId: "spotify-clone",
-      category: "design"
     }
   ];
 
