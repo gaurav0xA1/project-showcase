@@ -176,7 +176,8 @@ const ProjectShowcase = () => {
       thumbnail: "https://res.cloudinary.com/yklvte2k/image/upload/v1786803834/Screenshot_2026-08-15_200817.png",
       technologies: ["Illustrator", "Graphic Design", "Social Media", "Branding"],
       projectType: "graphics",
-      category: "graphics"
+      category: "graphics",
+      featured: true
     },
     {
       id: 18,
@@ -186,7 +187,7 @@ const ProjectShowcase = () => {
       thumbnail: "https://res.cloudinary.com/yklvte2k/image/upload/v1786804210/Screenshot_2026-08-15_201426.png",
       technologies: ["Graphic Design", "Poster"],
       projectType: "graphics",
-      category: "graphics"
+      category: "graphics" 
     },
     {
       id: 19,
