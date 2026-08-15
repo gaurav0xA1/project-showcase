@@ -172,9 +172,29 @@ const ProjectShowcase = () => {
       id: 13,
       title: "Campaign Graphics",
       description: "Poster-style design assets and social media visuals built for digital branding work.",
-      image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80",
-      thumbnail: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80",
+      image: "https://res.cloudinary.com/yklvte2k/image/upload/v1786803834/Screenshot_2026-08-15_200817.png",
+      thumbnail: "https://res.cloudinary.com/yklvte2k/image/upload/v1786803834/Screenshot_2026-08-15_200817.png",
       technologies: ["Illustrator", "Graphic Design", "Social Media", "Branding"],
+      projectType: "graphics",
+      category: "graphics"
+    },
+    {
+      id: 18,
+      title: "Campaign Graphic 201",
+      description: "Additional campaign graphic asset.",
+      image: "https://res.cloudinary.com/yklvte2k/image/upload/v1786804210/Screenshot_2026-08-15_201426.png",
+      thumbnail: "https://res.cloudinary.com/yklvte2k/image/upload/v1786804210/Screenshot_2026-08-15_201426.png",
+      technologies: ["Graphic Design", "Poster"],
+      projectType: "graphics",
+      category: "graphics"
+    },
+    {
+      id: 19,
+      title: "Campaign Graphic 202",
+      description: "Additional campaign graphic asset.",
+      image: "https://res.cloudinary.com/yklvte2k/image/upload/v1786804213/Screenshot_2026-08-15_201400.png",
+      thumbnail: "https://res.cloudinary.com/yklvte2k/image/upload/v1786804213/Screenshot_2026-08-15_201400.png",
+      technologies: ["Graphic Design", "Social Media"],
       projectType: "graphics",
       category: "graphics"
     },
@@ -183,7 +203,7 @@ const ProjectShowcase = () => {
       title: "Poster Set",
       description: "Sample design compositions for social posts and marketing collateral pieces.",
       image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
-      thumbnail: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+      thumbnail: "https://res.cloudinary.com/yklvte2k/image/upload/v1786803976/Screenshot_2026-08-15_201031.png",
       technologies: ["Poster Design", "Branding", "Social Media"],
       projectType: "graphics",
       category: "graphics"
