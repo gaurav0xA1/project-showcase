@@ -1,8 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders the portfolio showcase with separate media sections', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  expect(screen.getByText(/project showcase/i)).toBeInTheDocument();
+  expect(screen.getByRole('button', { name: /video work/i })).toBeInTheDocument();
+  expect(screen.getByRole('button', { name: /graphic design/i })).toBeInTheDocument();
 });

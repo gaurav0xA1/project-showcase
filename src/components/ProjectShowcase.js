@@ -6,9 +6,9 @@ import './ProjectShowcase.css';
 const ProjectShowcase = () => {
   const [filter, setFilter] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
+  const [activeMedia, setActiveMedia] = useState(null);
   const navigate = useNavigate();
 
-  // Sample project data - you can replace this with real data
   const projects = [
     {
       id: 1,
@@ -65,15 +65,13 @@ const ProjectShowcase = () => {
     {
       id: 5,
       title: "Cafe Website",
-      description: "WModern website for Chiya Sangam Cafe featuring menu, gallery, contact info, and an online reservation feature. Built for a seamless user experience and easy updates.",
+      description: "Modern website for Chiya Sangam Cafe featuring menu, gallery, contact info, and an online reservation feature. Built for a seamless user experience and easy updates.",
       image: "/images/projects/chiya-sangam.png",
       technologies: ["React", "Reservation System", "CSS3"],
       liveUrl: "https://gaurav0xa1.github.io/chiya-sangam/",
       githubUrl: "#",
       category: "web"
     },
-    // UI/UX Design Projects
-    
     {
       id: 8,
       title: "Spotify Clone",
@@ -89,7 +87,7 @@ const ProjectShowcase = () => {
       title: "E-commerce Platform",
       description: "Complete e-commerce website design with product pages, checkout flow, and user account management.",
       image: "/images/projects/e-commerce-ui.png",
-      technologies: ["Figma", "E-commerce", "Prototyping", "Conversion","Responsive"],
+      technologies: ["Figma", "E-commerce", "Prototyping", "Conversion", "Responsive"],
       projectType: "figma",
       figmaId: "e-commerce-ui",
       category: "design",
@@ -125,6 +123,70 @@ const ProjectShowcase = () => {
       figmaId: "sajha-ui",
       category: "design",
       featured: true
+    },
+    {
+      id: 12,
+      title: "Easy Ride",
+      description: "Short-form promo video concept for a transportation brand with motion-driven storytelling.",
+      image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+      thumbnail: "https://res.cloudinary.com/yklvte2k/image/upload/v1786802946/Screenshot_2026-08-15_195238_1.png",
+      video: "https://res.cloudinary.com/yklvte2k/video/upload/v1786799983/easyride.mp4",
+      technologies: ["Video Editing", "Motion Graphics", "Brand Story"],
+      projectType: "video",
+      category: "video"
+    },
+    {
+      id: 16,
+      title: "Campaign Reel",
+      description: "A product-style motion video with energetic transitions and strong visual rhythm.",
+      image: "https://res.cloudinary.com/yklvte2k/image/upload/v1786803075/Screenshot_2026-08-15_195554.png0",
+      thumbnail: "https://res.cloudinary.com/yklvte2k/image/upload/v1786803383/Screenshot_2026-08-15_195554_1.png",
+      video: "https://res.cloudinary.com/yklvte2k/video/upload/v1786799952/0729.mp4",
+      technologies: ["Editing", "Motion", "Storyboarding"],
+      projectType: "video",
+      category: "video"
+    },
+    {
+      id: 14,
+      title: "Campaign Reel",
+      description: "A cinematic commercial-style video with clean transitions and marketing-focused pacing.",
+      image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1200&q=80",
+      thumbnail: "https://res.cloudinary.com/yklvte2k/image/upload/v1786803166/Screenshot_2026-08-15_195722.png",
+      video: "https://res.cloudinary.com/yklvte2k/video/upload/v1786799903/AQO7fXio3Wc7ciirMjMrx3CUJ28dor46fGsmZrZwrqUm8TcGSreUElmPWAZdeZIC-iCPDewPZllTKM0_nsGwei39u7Uu6e9YKJL9_alBeZBIjg.mp4",
+      technologies: ["After Effects", "Motion Design", "Video Editing"],
+      projectType: "video",
+      category: "video",
+    },
+    {
+      id: 17,
+      title: "Easy Ride 2",
+      description: "A mobile-first social video with dynamic framing and polished pacing.",
+      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+      thumbnail: "https://res.cloudinary.com/yklvte2k/image/upload/v1786802756/Screenshot_2026-08-15_195022.png",
+      video: "https://res.cloudinary.com/yklvte2k/video/upload/v1786799892/SnapSave_App_2316401662177261_1080p.mp4",
+      technologies: ["Video Editing", "Social Content", "Mobile Reel"],
+      projectType: "video",
+      category: "video"
+    },
+    {
+      id: 13,
+      title: "Campaign Graphics",
+      description: "Poster-style design assets and social media visuals built for digital branding work.",
+      image: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80",
+      thumbnail: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80",
+      technologies: ["Illustrator", "Graphic Design", "Social Media", "Branding"],
+      projectType: "graphics",
+      category: "graphics"
+    },
+    {
+      id: 15,
+      title: "Poster Set",
+      description: "Sample design compositions for social posts and marketing collateral pieces.",
+      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+      thumbnail: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+      technologies: ["Poster Design", "Branding", "Social Media"],
+      projectType: "graphics",
+      category: "graphics"
     }
   ];
 
@@ -132,19 +194,42 @@ const ProjectShowcase = () => {
     { id: 'all', label: 'All Projects' },
     { id: 'web', label: 'Web Apps' },
     { id: 'design', label: 'UI/UX' },
-    { id: 'mobile', label: 'Mobile' }
+    { id: 'video', label: 'Video Work' },
+    { id: 'graphics', label: 'Graphic Design' }
   ];
 
-  const filteredProjects = projects.filter(project => {
-    const matchesCategory = filter === 'all' || project.category === filter;
-    const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         project.technologies.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+  const matchesSearch = (project) => {
+    const text = [
+      project.title,
+      project.description,
+      ...(project.technologies || [])
+    ].join(' ').toLowerCase();
+
+    return text.includes(searchTerm.toLowerCase());
+  };
+
+  const sectionConfig = [
+    { id: 'web', label: 'Web Apps' },
+    { id: 'design', label: 'UI/UX' },
+    { id: 'video', label: 'Video Work' },
+    { id: 'graphics', label: 'Graphic Design' }
+  ];
+
+  const filteredSections = sectionConfig
+    .map(section => ({
+      ...section,
+      items: projects.filter(project => {
+        const matchesCategory = filter === 'all' || project.category === filter;
+        return project.category === section.id && matchesCategory && matchesSearch(project);
+      })
+    }))
+    .filter(section => section.items.length > 0);
+
+  const openMedia = (project) => setActiveMedia(project);
+  const closeMedia = () => setActiveMedia(null);
 
   return (
-    <div className="project-showcase">
+    <div className={`project-showcase ${activeMedia ? 'media-open' : ''}`}>
       <div className="showcase-header">
         <div className="header-content">
           <h1>Project Showcase</h1>
@@ -176,28 +261,67 @@ const ProjectShowcase = () => {
         </div>
       </div>
 
-      <div className="projects-grid">
-        {filteredProjects.map(project => (
-          <ProjectCard
-            key={project.id}
-            title={project.title}
-            description={project.description}
-            image={project.image}
-            technologies={project.technologies}
-            liveUrl={project.liveUrl}
-            githubUrl={project.githubUrl}
-            projectType={project.projectType}
-            figmaId={project.figmaId}
-            featured={project.featured}
-            navigate={navigate}
-          />
-        ))}
+      <div className="content-sections">
+        {filteredSections.length > 0 ? (
+          filteredSections.map(section => (
+            <div key={section.id} className="media-section">
+              <h2 className="section-title">{section.label}</h2>
+              <div className="projects-grid">
+                {section.items.map(project => (
+                  <ProjectCard
+                    key={project.id}
+                    title={project.title}
+                    description={project.description}
+                    image={project.image}
+                    thumbnail={project.thumbnail}
+                    video={project.video}
+                    technologies={project.technologies}
+                    liveUrl={project.liveUrl}
+                    githubUrl={project.githubUrl}
+                    projectType={project.projectType}
+                    figmaId={project.figmaId}
+                    featured={project.featured}
+                    navigate={navigate}
+                    onMediaOpen={openMedia}
+                  />
+                ))}
+              </div>
+            </div>
+          ))
+        ) : (
+          <div className="no-results">
+            <h3>No projects found</h3>
+            <p>Try adjusting your search or filter criteria.</p>
+          </div>
+        )}
       </div>
 
-      {filteredProjects.length === 0 && (
-        <div className="no-results">
-          <h3>No projects found</h3>
-          <p>Try adjusting your search or filter criteria.</p>
+      {activeMedia && (
+        <div className="media-modal-backdrop" onClick={closeMedia}>
+          <div className="media-modal" onClick={(e) => e.stopPropagation()}>
+            <button className="media-modal-close" onClick={closeMedia} aria-label="Close media preview">×</button>
+
+            {activeMedia.video ? (
+              <video
+                className="media-modal-media"
+                src={activeMedia.video}
+                controls
+                autoPlay
+                playsInline
+              />
+            ) : (
+              <img
+                className="media-modal-media"
+                src={activeMedia.thumbnail || activeMedia.image}
+                alt={activeMedia.title}
+              />
+            )}
+
+            <div className="media-modal-content">
+              <h3 className="media-modal-title">{activeMedia.title}</h3>
+              <p className="media-modal-description">{activeMedia.description}</p>
+            </div>
+          </div>
         </div>
       )}
     </div>

@@ -4,21 +4,33 @@ import './ProjectCard.css';
 const ProjectCard = ({ 
   title, 
   description, 
-  image, 
+  image,
+  thumbnail,
+  video,
   technologies, 
   liveUrl, 
   githubUrl,
   projectType = 'web',
   figmaId,
   featured = false,
-  navigate
+  navigate,
+  onMediaOpen
 }) => {
   const [showOverlay, setShowOverlay] = useState(false);
+  const displayImage = thumbnail || image;
   
   const handleDemoClick = () => {
     if (projectType === 'figma' && figmaId) {
       navigate(`/figma/${figmaId}`);
-    } else if (liveUrl) {
+      return;
+    }
+
+    if ((projectType === 'video' || projectType === 'graphics' || video) && onMediaOpen) {
+      onMediaOpen({ title, description, image, thumbnail, video, projectType });
+      return;
+    }
+
+    if (liveUrl) {
       window.open(liveUrl, '_blank');
     }
   };
@@ -44,6 +56,11 @@ const ProjectCard = ({
   };
   
   const handleCardClick = () => {
+    if ((projectType === 'video' || projectType === 'graphics' || video) && onMediaOpen) {
+      onMediaOpen({ title, description, image, thumbnail, video, projectType });
+      return;
+    }
+
     if (window.innerWidth <= 768) {
       setShowOverlay(!showOverlay);
     }
@@ -52,18 +69,32 @@ const ProjectCard = ({
   return (
     <div className={`project-card ${featured ? 'featured' : ''}`}>
       <div className="project-image" onClick={handleCardClick}>
-        <img 
-          src={image} 
-          alt={title}
-          onError={(e) => {
-            e.target.src = "https://via.placeholder.com/400x200?text=" + encodeURIComponent(title);
-          }}
-        />
+        {video ? (
+          <video
+            className="project-video"
+            src={video}
+            poster={displayImage}
+            playsInline
+            preload="metadata"
+            muted
+            onError={(e) => {
+              e.target.style.display = 'none';
+            }}
+          />
+        ) : (
+          <img 
+            src={displayImage} 
+            alt={title}
+            onError={(e) => {
+              e.target.src = "https://via.placeholder.com/400x200?text=" + encodeURIComponent(title);
+            }}
+          />
+        )}
         <div className={`project-overlay ${showOverlay ? 'show-overlay' : ''}`}>
           <div className="project-links">
-            {(liveUrl || (projectType === 'figma' && figmaId)) && (
+            {(liveUrl || video || (projectType === 'figma' && figmaId) || projectType === 'video' || projectType === 'graphics') && (
               <button onClick={handleDemoClickWrapper} className="btn-primary">
-                {projectType === 'figma' ? 'View Design' : 'Live Demo'}
+                {projectType === 'figma' ? 'View Design' : projectType === 'video' ? 'Play Video' : projectType === 'graphics' ? 'View Graphic' : video ? 'Play Video' : 'Live Demo'}
               </button>
             )}
             {projectType !== 'figma' && githubUrl && githubUrl !== '#' && (
