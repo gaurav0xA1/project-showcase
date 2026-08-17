@@ -125,6 +125,28 @@ const ProjectShowcase = () => {
       featured: true
     },
     {
+      id: 20,
+      title: "Lukeka Drishya 1",
+      description: "Short-form promo video concept for a transportation brand with motion-driven storytelling.",
+      image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+      thumbnail: "https://res.cloudinary.com/yklvte2k/image/upload/v1786985355/Screenshot_2026-08-17_223358.png",
+      video: "https://res.cloudinary.com/yklvte2k/video/upload/v1786984641/%E0%A4%A4%E0%A4%AA%E0%A4%BE%E0%A4%88%E0%A4%82%E0%A4%95%E0%A5%8B_%E0%A4%9A%E0%A4%BF%E0%A4%AF%E0%A4%BE_%E0%A4%85%E0%A4%A1%E0%A5%8D%E0%A4%A1%E0%A4%BE_%E0%A4%95%E0%A5%81%E0%A4%A8_%E0%A4%B9%E0%A5%8B_EP1_-_%E0%A4%9A%E0%A4%BF%E0%A4%AF%E0%A4%BE%E0%A4%95%E0%A5%8B_%E0%A4%AC%E0%A4%BE%E0%A4%AB_%E0%A4%B0_%E0%A4%A6%E0%A5%87%E0%A4%B6%E0%A4%95%E0%A5%8B_%E0%A4%97%E0%A4%AB_%E0%A4%9A%E0%A4%BF%E0%A4%AF%E0%A4%BE%E0%A4%95%E0%A5%8B_%E0%A4%A4%E0%A4%BE%E0%A4%A4%E0%A5%8B%E0%A4%AA%E0%A4%A8%E0%A4%B8%E0%A4%81%E0%A4%97%E0%A5%88_%E0%A4%A6%E0%A5%87%E0%A4%B6%E0%A4%95%E0%A5%8B_%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%A8%E0%A5%80%E0%A4%A4%E0%A4%BF_%E0%A4%B5%E0%A4%BF%E0%A4%A6%E0%A5%87%E0%A4%B6%E0%A4%BF%E0%A4%A8.mp4",
+      technologies: ["Video Editing", "Davinci Resolve", "Brand Story"],
+      projectType: "video",
+      category: "video"
+    },
+    {
+      id: 21,
+      title: "Lukeka Drishya 2",
+      description: "Short-form promo video concept for a transportation brand with motion-driven storytelling.",
+      image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
+      thumbnail: "https://res.cloudinary.com/yklvte2k/image/upload/v1786985279/Screenshot_2026-08-17_223233.png",
+      video: "https://res.cloudinary.com/yklvte2k/video/upload/v1786984630/%E0%A4%9C%E0%A4%BF%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A4%97%E0%A5%80%E0%A4%AE%E0%A4%BE_%E0%A4%9C%E0%A4%A4%E0%A4%BF%E0%A4%B8%E0%A5%81%E0%A4%95%E0%A5%88_%E0%A4%89%E0%A4%A4%E0%A4%BE%E0%A4%B0%E0%A4%9A%E0%A4%A2%E0%A4%BE%E0%A4%B5_%E0%A4%86%E0%A4%8F_%E0%A4%AA%E0%A4%A8%E0%A4%BF_%E0%A4%8F%E0%A4%95%E0%A4%A6%E0%A4%BF%E0%A4%A8_%E0%A4%B8%E0%A4%AB%E0%A4%B2%E0%A4%A4%E0%A4%BE_%E0%A4%AA%E0%A4%95%E0%A5%8D%E0%A4%95%E0%A5%88_%E0%A4%86%E0%A4%89%E0%A4%81%E0%A4%9B_-EP2_-_%E0%A4%85%E0%A4%A8%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AE_%E0%A4%AC%E0%A4%B8%E0%A4%95%E0%A5%8B_%E0%A4%89%E0%A4%9C%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B2%E0%A5%8B%E0%A4%B9%E0%A4%BE%E0%A4%AE%E0%A5%80_%E0%A4%B8%E0%A4%AC%E0%A5%88_%E0%A4%86%E0%A4%AB.mp4",
+      technologies: ["Video Editing", "Davinci Resolve", "Brand Story"],
+      projectType: "video",
+      category: "video"
+    },
+    {
       id: 12,
       title: "Easy Ride",
       description: "Short-form promo video concept for a transportation brand with motion-driven storytelling.",
@@ -137,23 +159,23 @@ const ProjectShowcase = () => {
     },
     {
       id: 16,
-      title: "Campaign Reel",
+      title: "Campaign Reel 1",
       description: "A product-style motion video with energetic transitions and strong visual rhythm.",
       image: "https://res.cloudinary.com/yklvte2k/image/upload/v1786803075/Screenshot_2026-08-15_195554.png0",
       thumbnail: "https://res.cloudinary.com/yklvte2k/image/upload/v1786803383/Screenshot_2026-08-15_195554_1.png",
       video: "https://res.cloudinary.com/yklvte2k/video/upload/v1786799952/0729.mp4",
-      technologies: ["Editing", "Motion", "Storyboarding"],
+      technologies: ["AI Footage", "Motion", "Storyboarding"],
       projectType: "video",
       category: "video"
     },
     {
       id: 14,
-      title: "Campaign Reel",
+      title: "Campaign Reel 2",
       description: "A cinematic commercial-style video with clean transitions and marketing-focused pacing.",
       image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1200&q=80",
       thumbnail: "https://res.cloudinary.com/yklvte2k/image/upload/v1786803166/Screenshot_2026-08-15_195722.png",
       video: "https://res.cloudinary.com/yklvte2k/video/upload/v1786799903/AQO7fXio3Wc7ciirMjMrx3CUJ28dor46fGsmZrZwrqUm8TcGSreUElmPWAZdeZIC-iCPDewPZllTKM0_nsGwei39u7Uu6e9YKJL9_alBeZBIjg.mp4",
-      technologies: ["After Effects", "Motion Design", "Video Editing"],
+      technologies: [ "AI Footage", "Motion Design", "Video Editing"],
       projectType: "video",
       category: "video",
     },
