@@ -240,6 +240,46 @@ const ProjectShowcase = () => {
       technologies: ["Poster Design", "Branding", "Social Media"],
       projectType: "graphics",
       category: "graphics"
+    },
+    {
+      id: 23,
+      title: "24 Seven 1",
+      description: "Poster concept for the 24 Seven campaign, designed as a bold visual statement for social and print use.",
+      image: "https://res.cloudinary.com/yklvte2k/image/upload/v1787672498/1.png",
+      thumbnail: "https://res.cloudinary.com/yklvte2k/image/upload/v1787672498/1.png",
+      technologies: ["Graphic Design", "Poster", "Branding"],
+      projectType: "graphics",
+      category: "graphics"
+    },
+    {
+      id: 24,
+      title: "24 Seven 2",
+      description: "Poster concept for the 24 Seven campaign, created with a strong editorial and motion-inspired aesthetic.",
+      image: "https://res.cloudinary.com/yklvte2k/image/upload/v1787672497/2.png",
+      thumbnail: "https://res.cloudinary.com/yklvte2k/image/upload/v1787672497/2.png",
+      technologies: ["Graphic Design", "Poster", "Branding"],
+      projectType: "graphics",
+      category: "graphics"
+    },
+    {
+      id: 25,
+      title: "24 Seven 3",
+      description: "Poster concept for the 24 Seven campaign, designed to reinforce the visual identity with a premium, modern composition.",
+      image: "https://res.cloudinary.com/yklvte2k/image/upload/v1787672498/3.png",
+      thumbnail: "https://res.cloudinary.com/yklvte2k/image/upload/v1787672498/3.png",
+      technologies: ["Graphic Design", "Poster", "Branding"],
+      projectType: "graphics",
+      category: "graphics"
+    },
+    {
+      id: 26,
+      title: "24 Seven 4",
+      description: "Poster concept for the 24 Seven campaign, delivering a refined, high-impact social media visual direction.",
+      image: "https://res.cloudinary.com/yklvte2k/image/upload/v1787672501/4.png",
+      thumbnail: "https://res.cloudinary.com/yklvte2k/image/upload/v1787672501/4.png",
+      technologies: ["Graphic Design", "Poster", "Branding"],
+      projectType: "graphics",
+      category: "graphics"
     }
   ];
 
