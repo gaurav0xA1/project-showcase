@@ -148,6 +148,20 @@
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
 }
 
+.media-modal--poster {
+  width: min(760px, 84vw);
+  max-width: 760px;
+}
+
+.media-modal--landscape {
+  width: min(980px, 88vw);
+  max-width: 980px;
+}
+
+.media-modal--video {
+  width: min(1100px, 90vw);
+}
+
 .media-modal-close {
   position: absolute;
   top: 16px;
@@ -169,6 +183,19 @@
   object-fit: contain;
   background: #000;
   display: block;
+}
+
+.media-modal--poster .media-modal-media,
+.media-modal--landscape .media-modal-media {
+  width: 100%;
+  max-width: 100%;
+  max-height: 76vh;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  background: #0d0d0d;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .media-modal video {

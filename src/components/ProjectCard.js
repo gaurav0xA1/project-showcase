@@ -13,11 +13,15 @@ const ProjectCard = ({
   projectType = 'web',
   figmaId,
   featured = false,
+  aspectRatio = '16:9',
   navigate,
   onMediaOpen
 }) => {
   const [showOverlay, setShowOverlay] = useState(false);
   const displayImage = thumbnail || image;
+  const isGraphic = projectType === 'graphics';
+  const cardAspectClass = isGraphic ? `aspect-${(aspectRatio || '1:1').replace(':', '-')}` : '';
+  const cardVariantClass = isGraphic ? 'graphics-card' : '';
   
   const handleDemoClick = () => {
     if (projectType === 'figma' && figmaId) {
@@ -26,7 +30,7 @@ const ProjectCard = ({
     }
 
     if ((projectType === 'video' || projectType === 'graphics' || video) && onMediaOpen) {
-      onMediaOpen({ title, description, image, thumbnail, video, projectType });
+      onMediaOpen({ title, description, image, thumbnail, video, projectType, aspectRatio });
       return;
     }
 
@@ -57,7 +61,7 @@ const ProjectCard = ({
   
   const handleCardClick = () => {
     if ((projectType === 'video' || projectType === 'graphics' || video) && onMediaOpen) {
-      onMediaOpen({ title, description, image, thumbnail, video, projectType });
+      onMediaOpen({ title, description, image, thumbnail, video, projectType, aspectRatio });
       return;
     }
 
@@ -67,8 +71,8 @@ const ProjectCard = ({
   };
   
   return (
-    <div className={`project-card ${featured ? 'featured' : ''}`}>
-      <div className="project-image" onClick={handleCardClick}>
+    <div className={`project-card ${featured ? 'featured' : ''} ${cardVariantClass}`.trim()}>
+      <div className={`project-image ${cardAspectClass}`.trim()} onClick={handleCardClick}>
         {video ? (
           <video
             className="project-video"

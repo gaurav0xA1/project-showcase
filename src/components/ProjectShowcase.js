@@ -146,6 +146,7 @@ const ProjectShowcase = () => {
       projectType: "video",
       category: "video"
     },
+    
     // {
     //   id: 12,
     //   title: "Easy Ride",
@@ -200,17 +201,7 @@ const ProjectShowcase = () => {
     //   projectType: "video",
     //   category: "video"
     // },
-    {
-      id: 13,
-      title: "Campaign Graphics",
-      description: "Poster-style design assets and social media visuals built for digital branding work.",
-      image: "https://res.cloudinary.com/yklvte2k/image/upload/v1786803834/Screenshot_2026-08-15_200817.png",
-      thumbnail: "https://res.cloudinary.com/yklvte2k/image/upload/v1786803834/Screenshot_2026-08-15_200817.png",
-      technologies: ["Illustrator", "Graphic Design", "Social Media", "Branding"],
-      projectType: "graphics",
-      category: "graphics",
-      featured: true
-    },
+
     {
       id: 18,
       title: "Campaign Graphic 201",
@@ -219,7 +210,8 @@ const ProjectShowcase = () => {
       thumbnail: "https://res.cloudinary.com/yklvte2k/image/upload/v1786804210/Screenshot_2026-08-15_201426.png",
       technologies: ["Graphic Design", "Poster"],
       projectType: "graphics",
-      category: "graphics" 
+      category: "graphics",
+      aspectRatio: "4:3"
     },
     {
       id: 19,
@@ -229,7 +221,8 @@ const ProjectShowcase = () => {
       thumbnail: "https://res.cloudinary.com/yklvte2k/image/upload/v1786804213/Screenshot_2026-08-15_201400.png",
       technologies: ["Graphic Design", "Social Media"],
       projectType: "graphics",
-      category: "graphics"
+      category: "graphics",
+      aspectRatio: "4:3"
     },
     {
       id: 15,
@@ -239,7 +232,8 @@ const ProjectShowcase = () => {
       thumbnail: "https://res.cloudinary.com/yklvte2k/image/upload/v1786803976/Screenshot_2026-08-15_201031.png",
       technologies: ["Poster Design", "Branding", "Social Media"],
       projectType: "graphics",
-      category: "graphics"
+      category: "graphics",
+      aspectRatio: "4:3"
     },
     {
       id: 23,
@@ -249,7 +243,8 @@ const ProjectShowcase = () => {
       thumbnail: "https://res.cloudinary.com/yklvte2k/image/upload/v1787672498/1.png",
       technologies: ["Graphic Design", "Poster", "Branding"],
       projectType: "graphics",
-      category: "graphics"
+      category: "graphics",
+      aspectRatio: "1:1"
     },
     {
       id: 24,
@@ -259,7 +254,8 @@ const ProjectShowcase = () => {
       thumbnail: "https://res.cloudinary.com/yklvte2k/image/upload/v1787672497/2.png",
       technologies: ["Graphic Design", "Poster", "Branding"],
       projectType: "graphics",
-      category: "graphics"
+      category: "graphics",
+      aspectRatio: "1:1"
     },
     {
       id: 25,
@@ -269,7 +265,8 @@ const ProjectShowcase = () => {
       thumbnail: "https://res.cloudinary.com/yklvte2k/image/upload/v1787672498/3.png",
       technologies: ["Graphic Design", "Poster", "Branding"],
       projectType: "graphics",
-      category: "graphics"
+      category: "graphics",
+      aspectRatio: "1:1"
     },
     {
       id: 26,
@@ -279,8 +276,49 @@ const ProjectShowcase = () => {
       thumbnail: "https://res.cloudinary.com/yklvte2k/image/upload/v1787672501/4.png",
       technologies: ["Graphic Design", "Poster", "Branding"],
       projectType: "graphics",
-      category: "graphics"
-    }
+      category: "graphics",
+      aspectRatio: "1:1"
+    },
+    {
+      id: 27,
+      title: "24 Seven Waterproofing Informative Ad",
+      description: "Informative promotional ad video created for 24 Seven Waterproofing.",
+      video: "https://res.cloudinary.com/yklvte2k/video/upload/v1787823953/sir.mp4",
+      technologies: ["Video Editing", "Informative Ad", "Brand Promotion"],
+      projectType: "video",
+      category: "video"
+    },
+    {
+      id: 28,
+      title: "24 Seven Waterproofing Before & After",
+      description: "Meme-style promotional video created for 24 Seven Waterproofing.",
+      video: "https://res.cloudinary.com/yklvte2k/video/upload/v1787823964/before_after.mp4",
+      technologies: ["Video Editing", "Meme Marketing", "Brand Promotion"],
+      projectType: "video",
+      category: "video"
+    },
+    {
+      id: 29,
+      title: "24 Seven Waterproofing Raksha Bandhan",
+      description: "Square social media poster wishing everyone a happy Raksha Bandhan.",
+      image: "https://res.cloudinary.com/yklvte2k/image/upload/v1787824090/Your_paragraph_text_4.png",
+      thumbnail: "https://res.cloudinary.com/yklvte2k/image/upload/v1787824090/Your_paragraph_text_4.png",
+      technologies: ["Graphic Design", "Social Media"],
+      projectType: "graphics",
+      category: "graphics",
+      aspectRatio: "1:1"
+    },
+    {
+      id: 30,
+      title: "24 Seven Group 2",
+      description: "Informative promotional ad video created for 24 Seven Waterproofing.",
+      image: "https://res.cloudinary.com/yklvte2k/image/upload/v1788441986/Screenshot_2026-09-03_191052.png",
+      video: "https://res.cloudinary.com/yklvte2k/video/upload/v1788441203/liqmem.mp4",
+      technologies: ["Video Editing", "Informative Ad", "Brand Promotion"],
+      projectType: "video",
+      category: "video"
+    },
+
   ];
 
   const categories = [
@@ -374,6 +412,7 @@ const ProjectShowcase = () => {
                     projectType={project.projectType}
                     figmaId={project.figmaId}
                     featured={project.featured}
+                    aspectRatio={project.projectType === 'graphics' ? (project.aspectRatio || '1:1') : '16:9'}
                     navigate={navigate}
                     onMediaOpen={openMedia}
                   />
@@ -391,7 +430,10 @@ const ProjectShowcase = () => {
 
       {activeMedia && (
         <div className="media-modal-backdrop" onClick={closeMedia}>
-          <div className="media-modal" onClick={(e) => e.stopPropagation()}>
+          <div
+            className={`media-modal ${activeMedia.projectType === 'graphics' ? (activeMedia.aspectRatio === '1:1' ? 'media-modal--poster' : 'media-modal--landscape') : 'media-modal--video'}`}
+            onClick={(e) => e.stopPropagation()}
+          >
             <button className="media-modal-close" onClick={closeMedia} aria-label="Close media preview">×</button>
 
             {activeMedia.video ? (
